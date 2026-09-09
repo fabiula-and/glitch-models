@@ -413,3 +413,49 @@ vanessaCard.addEventListener(
 
     }
 );
+
+/* =========================================
+   FEATURED CAST — FELIPE ROCHA
+========================================= */
+
+
+/*
+O card do Felipe possui duas imagens.
+
+Imagem 01 = capa
+Imagem 02 = hover
+*/
+
+
+const felipeCard =
+    document.querySelector(".model-felipe");
+
+
+const felipeImage =
+    felipeCard.querySelector(".model-image");
+
+
+const felipeHoverImage =
+    felipeCard.dataset.imageHover;
+
+
+felipeCard.addEventListener(
+    "mouseenter",
+    () => {
+
+        felipeImage.src =
+            felipeHoverImage;
+
+    }
+);
+
+
+felipeCard.addEventListener(
+    "mouseleave",
+    () => {
+
+        felipeImage.src =
+            "images/5-felipe-01.jpeg";
+
+    }
+);
