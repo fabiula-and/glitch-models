@@ -224,17 +224,3 @@ header a:last-child {
     overflow: hidden;
 }
 
-
-/* VARIAÇÕES EDITORIAIS FUTURAS */
-
-/* Preparado para alguns modelos terem
-   proporções diferentes quando adicionarmos as imagens */
-
-.model-card:nth-child(5n) {
-    aspect-ratio: 4 / 5;
-}
-
-
-.model-card:nth-child(7n) {
-    aspect-ratio: 2 / 3;
-}
