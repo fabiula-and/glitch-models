@@ -643,3 +643,49 @@ marianaCard.addEventListener(
 
     }
 );
+
+/* =========================================
+   FEATURED CAST — RITA NAVARRO
+========================================= */
+
+
+/*
+O card da Rita possui duas imagens.
+
+Imagem 01 = capa
+Imagem 02 = hover
+*/
+
+
+const ritaCard =
+    document.querySelector(".model-rita");
+
+
+const ritaImage =
+    ritaCard.querySelector(".model-image");
+
+
+const ritaHoverImage =
+    ritaCard.dataset.imageHover;
+
+
+ritaCard.addEventListener(
+    "mouseenter",
+    () => {
+
+        ritaImage.src =
+            ritaHoverImage;
+
+    }
+);
+
+
+ritaCard.addEventListener(
+    "mouseleave",
+    () => {
+
+        ritaImage.src =
+            "images/10-rita-01.jpg";
+
+    }
+);
