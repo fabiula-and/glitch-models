@@ -1,63 +1,89 @@
 const editorials = document.querySelector(".editorials");
 const track = document.querySelector(".editorials-track");
 
-let horizontalPosition = 0;
+
+function setupEditorials() {
+
+    const horizontalDistance =
+        track.scrollWidth - window.innerWidth;
+
+
+    /*
+    Cria espaço vertical suficiente
+    para percorrer toda a distância horizontal.
+    */
+
+    editorials.style.height =
+        `${window.innerHeight + horizontalDistance}px`;
+}
+
+
+function updateEditorials() {
+
+    const sectionTop =
+        editorials.offsetTop;
+
+    const sectionHeight =
+        editorials.offsetHeight;
+
+    const scrollPosition =
+        window.scrollY;
+
+
+    /*
+    Calcula quanto da seção
+    já foi percorrido verticalmente.
+    */
+
+    let progress =
+        scrollPosition - sectionTop;
+
+
+    const horizontalDistance =
+        track.scrollWidth - window.innerWidth;
+
+
+    /*
+    Limita o movimento entre
+    o início e o fim dos cards.
+    */
+
+    progress = Math.max(
+        0,
+        Math.min(progress, horizontalDistance)
+    );
+
+
+    track.style.transform =
+        `translateX(-${progress}px)`;
+}
+
 
 window.addEventListener(
-    "wheel",
-    function (event) {
-
-        const sectionTop = editorials.offsetTop;
-        const sectionBottom =
-            sectionTop + editorials.offsetHeight;
-
-        const scrollPosition = window.scrollY;
-
-        const isInsideEditorials =
-            scrollPosition >= sectionTop &&
-            scrollPosition < sectionBottom;
-
-        const maxScroll =
-            track.scrollWidth - window.innerWidth + 24;
+    "scroll",
+    updateEditorials
+);
 
 
-        if (
-            isInsideEditorials &&
-            event.deltaY > 0 &&
-            horizontalPosition < maxScroll
-        ) {
+window.addEventListener(
+    "resize",
+    () => {
 
-            event.preventDefault();
+        setupEditorials();
 
-            horizontalPosition += event.deltaY;
+        updateEditorials();
 
-            if (horizontalPosition > maxScroll) {
-                horizontalPosition = maxScroll;
-            }
-
-            track.style.transform =
-                `translateX(-${horizontalPosition}px)`;
-        }
+    }
+);
 
 
-        if (
-            isInsideEditorials &&
-            event.deltaY < 0 &&
-            horizontalPosition > 0
-        ) {
+window.addEventListener(
+    "load",
+    () => {
 
-            event.preventDefault();
+        setupEditorials();
 
-            horizontalPosition += event.deltaY;
+        updateEditorials();
 
-            if (horizontalPosition < 0) {
-                horizontalPosition = 0;
-            }
-
-            track.style.transform =
-                `translateX(-${horizontalPosition}px)`;
-        }
-
-    },
-    { passive: false }
+    }
 );
