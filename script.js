@@ -505,3 +505,49 @@ alvaroCard.addEventListener(
 
     }
 );
+
+/* =========================================
+   FEATURED CAST — BRENO DUARTE
+========================================= */
+
+
+/*
+O card do Breno possui duas imagens.
+
+Imagem 01 = capa
+Imagem 02 = hover
+*/
+
+
+const brenoCard =
+    document.querySelector(".model-breno");
+
+
+const brenoImage =
+    brenoCard.querySelector(".model-image");
+
+
+const brenoHoverImage =
+    brenoCard.dataset.imageHover;
+
+
+brenoCard.addEventListener(
+    "mouseenter",
+    () => {
+
+        brenoImage.src =
+            brenoHoverImage;
+
+    }
+);
+
+
+brenoCard.addEventListener(
+    "mouseleave",
+    () => {
+
+        brenoImage.src =
+            "images/7-breno-01.png";
+
+    }
+);
