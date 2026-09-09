@@ -321,3 +321,49 @@ rebeccaCard.addEventListener(
 
     }
 );
+
+/* =========================================
+   FEATURED CAST — MIA PETRONILIA
+========================================= */
+
+
+/*
+O card da Mia possui duas imagens.
+
+Imagem 01 = capa
+Imagem 02 = hover
+*/
+
+
+const miaCard =
+    document.querySelector(".model-mia");
+
+
+const miaImage =
+    miaCard.querySelector(".model-image");
+
+
+const miaHoverImage =
+    miaCard.dataset.imageHover;
+
+
+miaCard.addEventListener(
+    "mouseenter",
+    () => {
+
+        miaImage.src =
+            miaHoverImage;
+
+    }
+);
+
+
+miaCard.addEventListener(
+    "mouseleave",
+    () => {
+
+        miaImage.src =
+            "images/3-mia-01.png";
+
+    }
+);
