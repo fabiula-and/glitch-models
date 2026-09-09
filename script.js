@@ -551,3 +551,49 @@ brenoCard.addEventListener(
 
     }
 );
+
+/* =========================================
+   FEATURED CAST — NOAH RIBEIRO
+========================================= */
+
+
+/*
+O card do Noah possui duas imagens.
+
+Imagem 01 = capa
+Imagem 02 = hover
+*/
+
+
+const noahCard =
+    document.querySelector(".model-noah");
+
+
+const noahImage =
+    noahCard.querySelector(".model-image");
+
+
+const noahHoverImage =
+    noahCard.dataset.imageHover;
+
+
+noahCard.addEventListener(
+    "mouseenter",
+    () => {
+
+        noahImage.src =
+            noahHoverImage;
+
+    }
+);
+
+
+noahCard.addEventListener(
+    "mouseleave",
+    () => {
+
+        noahImage.src =
+            "images/8-noah-01.jpeg";
+
+    }
+);
