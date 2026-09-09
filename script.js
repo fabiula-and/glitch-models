@@ -689,3 +689,49 @@ ritaCard.addEventListener(
 
     }
 );
+
+/* =========================================
+   FEATURED CAST — LAURA NAKAMURA
+========================================= */
+
+
+/*
+O card da Laura possui duas imagens.
+
+Imagem 01 = capa
+Imagem 02 = hover
+*/
+
+
+const lauraCard =
+    document.querySelector(".model-laura");
+
+
+const lauraImage =
+    lauraCard.querySelector(".model-image");
+
+
+const lauraHoverImage =
+    lauraCard.dataset.imageHover;
+
+
+lauraCard.addEventListener(
+    "mouseenter",
+    () => {
+
+        lauraImage.src =
+            lauraHoverImage;
+
+    }
+);
+
+
+lauraCard.addEventListener(
+    "mouseleave",
+    () => {
+
+        lauraImage.src =
+            "images/11-laura-01.png";
+
+    }
+);
