@@ -77,6 +77,19 @@ header a:last-child {
 /* EDITORIAIS */
 
 .editorials {
+    position: relative;
+
+    overflow: clip;
+}
+
+
+/* ÁREA FIXA DURANTE A ROLAGEM */
+
+.editorials-track {
+    position: sticky;
+
+    top: 0;
+
     height: 100vh;
 
     padding: 24px;
@@ -84,15 +97,6 @@ header a:last-child {
     display: flex;
 
     align-items: flex-end;
-
-    overflow: hidden;
-}
-
-
-/* ÁREA DOS CARDS */
-
-.editorials-track {
-    display: flex;
 
     gap: 24px;
 
@@ -129,7 +133,6 @@ header a:last-child {
     position: absolute;
 
     top: 20px;
-
     left: 20px;
 
     font-size: 12px;
@@ -142,7 +145,6 @@ header a:last-child {
     position: absolute;
 
     bottom: 20px;
-
     left: 20px;
 
     margin: 0;
