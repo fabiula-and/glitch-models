@@ -93,7 +93,7 @@ window.addEventListener(
 
 
 /* =========================================
-   TROCA DE IMAGENS AO PASSAR O MOUSE
+   TROCA DE IMAGENS DOS EDITORIAIS
 ========================================= */
 
 
@@ -183,14 +183,6 @@ editorialCards.forEach((editorial) => {
                     currentImage++;
 
 
-                    /*
-                    Se chegar ao final,
-                    volta para a segunda imagem.
-
-                    A primeira continua sendo
-                    a imagem principal.
-                    */
-
                     if (
                         currentImage >=
                         editorial.images.length
@@ -203,7 +195,6 @@ editorialCards.forEach((editorial) => {
 
                     image.src =
                         editorial.images[currentImage];
-
 
                 },
                 900
@@ -236,3 +227,50 @@ editorialCards.forEach((editorial) => {
     );
 
 });
+
+
+/* =========================================
+   FEATURED CAST — SANTINO
+========================================= */
+
+
+/*
+O card do Santino possui apenas duas imagens.
+
+Imagem 01 = capa
+Imagem 02 = hover
+*/
+
+
+const santinoCard =
+    document.querySelector(".model-santino");
+
+
+const santinoImage =
+    santinoCard.querySelector(".model-image");
+
+
+const santinoHoverImage =
+    santinoCard.dataset.imageHover;
+
+
+santinoCard.addEventListener(
+    "mouseenter",
+    () => {
+
+        santinoImage.src =
+            santinoHoverImage;
+
+    }
+);
+
+
+santinoCard.addEventListener(
+    "mouseleave",
+    () => {
+
+        santinoImage.src =
+            "images/1-santino-01.png";
+
+    }
+);
