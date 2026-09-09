@@ -46,11 +46,13 @@ header a {
 
     text-decoration: none;
 
-    font-family: "League Spartan", Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
 
-    font-size: 14px;
+    font-size: 12px;
 
     font-weight: 600;
+
+    letter-spacing: 0.08em;
 
     text-transform: uppercase;
 }
@@ -61,14 +63,18 @@ header a:first-child {
 }
 
 
+/* LOGO */
+
 .logo {
     justify-self: center;
+
+    font-family: "League Spartan", Arial, sans-serif;
 
     font-size: 20px;
 
     font-weight: 700;
 
-    letter-spacing: -0.8px;
+    letter-spacing: 0.12em;
 }
 
 
@@ -166,9 +172,11 @@ header a:last-child {
 
     font-weight: 700;
 
-    line-height: 0.9;
+    line-height: 0.95;
 
-    letter-spacing: -0.03em;
+    letter-spacing: 0.06em;
+
+    text-transform: uppercase;
 }
 
 
@@ -184,6 +192,8 @@ header a:last-child {
 }
 
 
+/* SUBTÍTULO FEATURED */
+
 .featured-title span {
     display: block;
 
@@ -197,8 +207,10 @@ header a:last-child {
 }
 
 
+/* TÍTULO CAST */
+
 .featured-title h2 {
-    margin-top: 6px;
+    margin-top: 8px;
 
     font-family: "League Spartan", Arial, sans-serif;
 
@@ -206,9 +218,11 @@ header a:last-child {
 
     font-weight: 700;
 
-    line-height: 0.9;
+    line-height: 0.95;
 
-    letter-spacing: -0.03em;
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
 }
 
 
@@ -294,6 +308,8 @@ header a:last-child {
 }
 
 
+/* TEXTOS DO SOBRE */
+
 .about-content p {
     font-family: "Inter", Arial, sans-serif;
 
@@ -319,6 +335,8 @@ header a:last-child {
     font-size: 14px;
 
     font-weight: 600;
+
+    letter-spacing: 0.04em;
 
     padding-top: 32px;
 }
