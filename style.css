@@ -301,6 +301,8 @@ header a:last-child {
 
     object-fit: cover;
 
+    object-position: center center;
+
     position: absolute;
 
     top: 0;
