@@ -317,7 +317,7 @@ rebeccaCard.addEventListener(
     () => {
 
         rebeccaImage.src =
-            "images/2-rebecca-01.jpg";
+            "images/2-rebecca-02.jpg";
 
     }
 );
