@@ -91,7 +91,7 @@ header a:last-child {
 /* EDITORIAIS */
 
 .editorials {
-    min-height: 100vh;
+    height: 100vh;
     padding: 24px;
     display: flex;
     align-items: flex-end;
@@ -106,7 +106,7 @@ header a:last-child {
 
 .editorial-card {
     width: 380px;
-    height: 70vh;
+    height: calc(100vh - 120px);
     border-radius: 1px;
     background: #2a2a2a;
     color: #f5f5f5;
