@@ -275,7 +275,6 @@ santinoCard.addEventListener(
     }
 );
 
-
 /* =========================================
    FEATURED CAST — REBECCA
 ========================================= */
@@ -302,11 +301,11 @@ const rebeccaHoverImage =
 
 
 rebeccaCard.addEventListener(
-    "mouseleave",
+    "mouseenter",
     () => {
 
         rebeccaImage.src =
-            "images/2-rebecca-02.png";
+            rebeccaHoverImage;
 
     }
 );
@@ -317,10 +316,11 @@ rebeccaCard.addEventListener(
     () => {
 
         rebeccaImage.src =
-            "images/2-rebecca-02.jpg";
+            "images/2-rebecca-02.png";
 
     }
 );
+
 
 /* =========================================
    FEATURED CAST — MIA PETRONILIA
