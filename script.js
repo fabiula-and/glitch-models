@@ -597,3 +597,49 @@ noahCard.addEventListener(
 
     }
 );
+
+/* =========================================
+   FEATURED CAST — MARIANA ALVES
+========================================= */
+
+
+/*
+O card da Mariana possui duas imagens.
+
+Imagem 01 = capa
+Imagem 02 = hover
+*/
+
+
+const marianaCard =
+    document.querySelector(".model-mariana");
+
+
+const marianaImage =
+    marianaCard.querySelector(".model-image");
+
+
+const marianaHoverImage =
+    marianaCard.dataset.imageHover;
+
+
+marianaCard.addEventListener(
+    "mouseenter",
+    () => {
+
+        marianaImage.src =
+            marianaHoverImage;
+
+    }
+);
+
+
+marianaCard.addEventListener(
+    "mouseleave",
+    () => {
+
+        marianaImage.src =
+            "images/9-mariana-01.png";
+
+    }
+);
