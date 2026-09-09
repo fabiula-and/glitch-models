@@ -1,1 +1,89 @@
+/* RESET BÁSICO */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* CONFIGURAÇÕES GERAIS */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* MENU */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    padding: 24px;
+
+    z-index: 1000;
+}
+
+
+header a {
+    color: #f5f5f5;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+}
+
+
+header a:first-child {
+    justify-self: start;
+}
+
+
+.logo {
+    justify-self: center;
+
+    font-weight: bold;
+
+    letter-spacing: -0.5px;
+}
+
+
+header a:last-child {
+    justify-self: end;
+}
+
+
+/* ÁREA TEMPORÁRIA */
+
+.intro {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.intro h1 {
+    font-size: clamp(48px, 10vw, 160px);
+
+    letter-spacing: -0.05em;
+}
