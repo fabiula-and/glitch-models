@@ -275,6 +275,7 @@ santinoCard.addEventListener(
     }
 );
 
+
 /* =========================================
    FEATURED CAST — REBECCA
 ========================================= */
@@ -368,6 +369,7 @@ miaCard.addEventListener(
     }
 );
 
+
 /* =========================================
    FEATURED CAST — VANESSA VEGA
 ========================================= */
@@ -413,6 +415,7 @@ vanessaCard.addEventListener(
 
     }
 );
+
 
 /* =========================================
    FEATURED CAST — FELIPE ROCHA
@@ -460,6 +463,7 @@ felipeCard.addEventListener(
     }
 );
 
+
 /* =========================================
    FEATURED CAST — ÁLVARO BLANCO
 ========================================= */
@@ -505,6 +509,7 @@ alvaroCard.addEventListener(
 
     }
 );
+
 
 /* =========================================
    FEATURED CAST — BRENO DUARTE
@@ -552,6 +557,7 @@ brenoCard.addEventListener(
     }
 );
 
+
 /* =========================================
    FEATURED CAST — NOAH RIBEIRO
 ========================================= */
@@ -597,6 +603,7 @@ noahCard.addEventListener(
 
     }
 );
+
 
 /* =========================================
    FEATURED CAST — MARIANA ALVES
@@ -644,6 +651,7 @@ marianaCard.addEventListener(
     }
 );
 
+
 /* =========================================
    FEATURED CAST — RITA NAVARRO
 ========================================= */
@@ -685,10 +693,11 @@ ritaCard.addEventListener(
     () => {
 
         ritaImage.src =
-            "images/10-rita-01.jpg";
+            "images/10-rita-02.png";
 
     }
 );
+
 
 /* =========================================
    FEATURED CAST — LAURA NAKAMURA
@@ -735,6 +744,7 @@ lauraCard.addEventListener(
 
     }
 );
+
 
 /* =========================================
    FEATURED CAST — RUI TEIXEIRA
