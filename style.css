@@ -77,6 +77,19 @@ header a:last-child {
 /* EDITORIAIS */
 
 .editorials {
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* ÁREA DOS CARDS */
+
+.editorials-track {
+    position: sticky;
+
+    top: 0;
+
     height: 100vh;
 
     padding: 24px;
@@ -85,16 +98,11 @@ header a:last-child {
 
     align-items: flex-end;
 
-    overflow: hidden;
-}
-
-
-.editorials-track {
-    display: flex;
-
     gap: 24px;
 
     width: max-content;
+
+    will-change: transform;
 }
 
 
