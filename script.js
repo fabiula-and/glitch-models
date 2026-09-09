@@ -367,3 +367,49 @@ miaCard.addEventListener(
 
     }
 );
+
+/* =========================================
+   FEATURED CAST — VANESSA VEGA
+========================================= */
+
+
+/*
+O card da Vanessa possui duas imagens.
+
+Imagem 01 = capa
+Imagem 02 = hover
+*/
+
+
+const vanessaCard =
+    document.querySelector(".model-vanessa");
+
+
+const vanessaImage =
+    vanessaCard.querySelector(".model-image");
+
+
+const vanessaHoverImage =
+    vanessaCard.dataset.imageHover;
+
+
+vanessaCard.addEventListener(
+    "mouseenter",
+    () => {
+
+        vanessaImage.src =
+            vanessaHoverImage;
+
+    }
+);
+
+
+vanessaCard.addEventListener(
+    "mouseleave",
+    () => {
+
+        vanessaImage.src =
+            "images/4-vanessa-01.png";
+
+    }
+);
