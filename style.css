@@ -98,8 +98,10 @@ header a:last-child {
 }
 
 
+/* CARDS DOS EDITORIAIS */
+
 .editorial-card {
-    width: 380px;
+    width: calc((100vw - 96px) / 2.35);
 
     height: calc(100vh - 80px);
 
