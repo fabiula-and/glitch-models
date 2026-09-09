@@ -152,7 +152,7 @@ header a:last-child {
 /* FEATURED CAST */
 
 .featured-cast {
-    padding: 64px 24px 100px;
+    padding: 48px 24px 100px;
 }
 
 
@@ -175,11 +175,11 @@ header a:last-child {
 .featured-title h2 {
     margin-top: 6px;
 
-    font-size: clamp(48px, 5vw, 72px);
+    font-size: 42px;
 
     line-height: 0.9;
 
-    letter-spacing: -0.05em;
+    letter-spacing: -0.03em;
 }
 
 
