@@ -47,6 +47,8 @@ header a {
 
     font-size: 14px;
 
+    font-weight: 600;
+
     text-transform: uppercase;
 }
 
@@ -59,9 +61,11 @@ header a:first-child {
 .logo {
     justify-self: center;
 
+    font-size: 20px;
+
     font-weight: bold;
 
-    letter-spacing: -0.5px;
+    letter-spacing: -0.8px;
 }
 
 
@@ -70,71 +74,74 @@ header a:last-child {
 }
 
 
-/* ÁREA TEMPORÁRIA */
-
-.intro {
-    min-height: 100vh;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-}
-
-
-.intro h1 {
-    font-size: clamp(48px, 10vw, 160px);
-
-    letter-spacing: -0.05em;
-}
-
 /* EDITORIAIS */
 
 .editorials {
     height: 100vh;
+
     padding: 24px;
+
     display: flex;
+
     align-items: flex-end;
+
     overflow: hidden;
 }
+
 
 .editorials-track {
     display: flex;
+
     gap: 24px;
+
     width: max-content;
 }
 
+
 .editorial-card {
     width: 380px;
-    height: calc(100vh - 120px);
+
+    height: calc(100vh - 80px);
+
     border-radius: 1px;
+
     background: #2a2a2a;
+
     color: #f5f5f5;
 
     position: relative;
+
     flex-shrink: 0;
 
     text-decoration: none;
+
     overflow: hidden;
 }
 
+
 .editorial-category {
     position: absolute;
+
     top: 20px;
     left: 20px;
 
     font-size: 12px;
+
     letter-spacing: 0.08em;
 }
 
+
 .editorial-card h2 {
     position: absolute;
+
     bottom: 20px;
     left: 20px;
 
     margin: 0;
 
     font-size: 42px;
+
     line-height: 0.9;
+
     letter-spacing: -0.03em;
 }
