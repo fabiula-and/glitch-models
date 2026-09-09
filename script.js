@@ -459,3 +459,49 @@ felipeCard.addEventListener(
 
     }
 );
+
+/* =========================================
+   FEATURED CAST — ÁLVARO BLANCO
+========================================= */
+
+
+/*
+O card do Álvaro possui duas imagens.
+
+Imagem 01 = capa
+Imagem 02 = hover
+*/
+
+
+const alvaroCard =
+    document.querySelector(".model-alvaro");
+
+
+const alvaroImage =
+    alvaroCard.querySelector(".model-image");
+
+
+const alvaroHoverImage =
+    alvaroCard.dataset.imageHover;
+
+
+alvaroCard.addEventListener(
+    "mouseenter",
+    () => {
+
+        alvaroImage.src =
+            alvaroHoverImage;
+
+    }
+);
+
+
+alvaroCard.addEventListener(
+    "mouseleave",
+    () => {
+
+        alvaroImage.src =
+            "images/6-alvaro-01.png";
+
+    }
+);
