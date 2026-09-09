@@ -87,3 +87,54 @@ header a:last-child {
 
     letter-spacing: -0.05em;
 }
+
+/* EDITORIAIS */
+
+.editorials {
+    min-height: 100vh;
+    padding: 24px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.editorials-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+}
+
+.editorial-card {
+    width: 380px;
+    height: 70vh;
+    border-radius: 1px;
+    background: #2a2a2a;
+    color: #f5f5f5;
+
+    position: relative;
+    flex-shrink: 0;
+
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.editorial-category {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    font-size: 12px;
+    letter-spacing: 0.08em;
+}
+
+.editorial-card h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    margin: 0;
+
+    font-size: 42px;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+}
