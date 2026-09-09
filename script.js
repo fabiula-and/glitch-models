@@ -1,74 +1,63 @@
 const editorials = document.querySelector(".editorials");
 const track = document.querySelector(".editorials-track");
 
-function setupHorizontalScroll() {
-
-    const trackWidth = track.scrollWidth;
-
-    const viewportWidth = window.innerWidth;
-
-    const horizontalDistance = trackWidth - viewportWidth + 48;
-
-
-    editorials.style.height =
-        `${window.innerHeight + horizontalDistance}px`;
-
-}
-
-
-function updateHorizontalScroll() {
-
-    const sectionTop =
-        editorials.offsetTop;
-
-    const scrollPosition =
-        window.scrollY;
-
-    const horizontalDistance =
-        track.scrollWidth - window.innerWidth + 48;
-
-
-    let progress =
-        scrollPosition - sectionTop;
-
-
-    progress = Math.max(
-        0,
-        Math.min(progress, horizontalDistance)
-    );
-
-
-    track.style.transform =
-        `translateX(-${progress}px)`;
-
-}
-
+let horizontalPosition = 0;
 
 window.addEventListener(
-    "scroll",
-    updateHorizontalScroll
-);
+    "wheel",
+    function (event) {
+
+        const sectionTop = editorials.offsetTop;
+        const sectionBottom =
+            sectionTop + editorials.offsetHeight;
+
+        const scrollPosition = window.scrollY;
+
+        const isInsideEditorials =
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionBottom;
+
+        const maxScroll =
+            track.scrollWidth - window.innerWidth + 24;
 
 
-window.addEventListener(
-    "resize",
-    () => {
+        if (
+            isInsideEditorials &&
+            event.deltaY > 0 &&
+            horizontalPosition < maxScroll
+        ) {
 
-        setupHorizontalScroll();
+            event.preventDefault();
 
-        updateHorizontalScroll();
+            horizontalPosition += event.deltaY;
 
-    }
-);
+            if (horizontalPosition > maxScroll) {
+                horizontalPosition = maxScroll;
+            }
+
+            track.style.transform =
+                `translateX(-${horizontalPosition}px)`;
+        }
 
 
-window.addEventListener(
-    "load",
-    () => {
+        if (
+            isInsideEditorials &&
+            event.deltaY < 0 &&
+            horizontalPosition > 0
+        ) {
 
-        setupHorizontalScroll();
+            event.preventDefault();
 
-        updateHorizontalScroll();
+            horizontalPosition += event.deltaY;
 
-    }
+            if (horizontalPosition < 0) {
+                horizontalPosition = 0;
+            }
+
+            track.style.transform =
+                `translateX(-${horizontalPosition}px)`;
+        }
+
+    },
+    { passive: false }
 );
