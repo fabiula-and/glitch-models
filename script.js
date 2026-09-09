@@ -735,3 +735,49 @@ lauraCard.addEventListener(
 
     }
 );
+
+/* =========================================
+   FEATURED CAST — RUI TEIXEIRA
+========================================= */
+
+
+/*
+O card do Rui possui duas imagens.
+
+Imagem 01 = capa
+Imagem 02 = hover
+*/
+
+
+const ruiCard =
+    document.querySelector(".model-rui");
+
+
+const ruiImage =
+    ruiCard.querySelector(".model-image");
+
+
+const ruiHoverImage =
+    ruiCard.dataset.imageHover;
+
+
+ruiCard.addEventListener(
+    "mouseenter",
+    () => {
+
+        ruiImage.src =
+            ruiHoverImage;
+
+    }
+);
+
+
+ruiCard.addEventListener(
+    "mouseleave",
+    () => {
+
+        ruiImage.src =
+            "images/12-rui-01.png";
+
+    }
+);
