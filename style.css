@@ -152,19 +152,19 @@ header a:last-child {
 /* FEATURED CAST */
 
 .featured-cast {
-    padding: 100px 24px 120px;
+    padding: 64px 24px 100px;
 }
 
 
 .featured-title {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 }
 
 
 .featured-title span {
     display: block;
 
-    font-size: 14px;
+    font-size: 12px;
 
     font-weight: 600;
 
@@ -173,11 +173,11 @@ header a:last-child {
 
 
 .featured-title h2 {
-    margin-top: 4px;
+    margin-top: 6px;
 
-    font-size: clamp(48px, 8vw, 120px);
+    font-size: clamp(48px, 5vw, 72px);
 
-    line-height: 0.85;
+    line-height: 0.9;
 
     letter-spacing: -0.05em;
 }
@@ -223,4 +223,3 @@ header a:last-child {
 
     overflow: hidden;
 }
-
