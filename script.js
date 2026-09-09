@@ -235,7 +235,7 @@ editorialCards.forEach((editorial) => {
 
 
 /*
-O card do Santino possui apenas duas imagens.
+O card do Santino possui duas imagens.
 
 Imagem 01 = capa
 Imagem 02 = hover
@@ -271,6 +271,53 @@ santinoCard.addEventListener(
 
         santinoImage.src =
             "images/1-santino-01.png";
+
+    }
+);
+
+
+/* =========================================
+   FEATURED CAST — REBECCA
+========================================= */
+
+
+/*
+O card da Rebecca possui duas imagens.
+
+Imagem 01 = capa
+Imagem 02 = hover
+*/
+
+
+const rebeccaCard =
+    document.querySelector(".model-rebecca");
+
+
+const rebeccaImage =
+    rebeccaCard.querySelector(".model-image");
+
+
+const rebeccaHoverImage =
+    rebeccaCard.dataset.imageHover;
+
+
+rebeccaCard.addEventListener(
+    "mouseenter",
+    () => {
+
+        rebeccaImage.src =
+            rebeccaHoverImage;
+
+    }
+);
+
+
+rebeccaCard.addEventListener(
+    "mouseleave",
+    () => {
+
+        rebeccaImage.src =
+            "images/2-rebecca-01.jpg";
 
     }
 );
