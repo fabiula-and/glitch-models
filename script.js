@@ -302,11 +302,11 @@ const rebeccaHoverImage =
 
 
 rebeccaCard.addEventListener(
-    "mouseenter",
+    "mouseleave",
     () => {
 
         rebeccaImage.src =
-            rebeccaHoverImage;
+            "images/2-rebecca-02.png";
 
     }
 );
